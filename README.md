@@ -1,5 +1,7 @@
 # Chatbot.io
 
+<img src="tools/assets/images/app-plan.png" />
+
 ## Runnig project
 
 `rush update`

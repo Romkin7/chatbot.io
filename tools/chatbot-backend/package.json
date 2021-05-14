@@ -1,0 +1,24 @@
+{
+  "name": "chatbot-backend",
+  "version": "1.0.0",
+  "description": "Socket.io NodeJS Chatbot backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Romkin7/chatbot.io.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "socket.io",
+    "React"
+  ],
+  "author": "Roman Tuoimisto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Romkin7/chatbot.io/issues"
+  },
+  "homepage": "https://github.com/Romkin7/chatbot.io#readme"
+}

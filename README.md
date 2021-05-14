@@ -10,7 +10,7 @@
 
 ## Build for production
 
-`yarn prettier:fix`
+`rush prettier`
 
 First build:
 

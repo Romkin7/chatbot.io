@@ -382,6 +382,22 @@
 	 * 3. It's useful to have a centralized inventory of all projects and their important metadata.
 	 */
 	"projects": [
+		{
+			"packageName": "chatbot-backend",
+			"projectFolder": "tools/chatbot-backend"
+		},
+		{
+			"packageName": "chatbot-frontend",
+			"projectFolder": "tools/chatbot-frontend"
+		},
+		{
+			"packageName": "assets",
+			"projectFolder": "tools/assets"
+		},
+		{
+			"packageName": "app-shared-types",
+			"projectFolder": "tools/types"
+		}
 		// {
 		//   /**
 		//    * The NPM package name of the project (must match package.json)

@@ -22,7 +22,7 @@
       // This will invoke common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
       "shellCommand": "pretty-quick --staged"
     },
-    // {
+    {
     //   /**
     //    * (Required) Determines the type of custom command.
     //    * Rush's "bulk" commands are invoked separately for each project.  Rush will look in
@@ -31,7 +31,7 @@
     //    * according to the dependency graph (similar to how "rush build" works).
     //    * The set of projects can be restricted e.g. using the "--to" or "--from" parameters.
     //    */
-    //   "commandKind": "bulk",
+    "commandKind": "bulk",
     // 
     //   /**
     //    * (Required) The name that will be typed as part of the command line.  This is also the name
@@ -43,13 +43,13 @@
     //    * Note that if the "rebuild" command is overridden here, it becomes separated from the "build" command
     //    * and will call the "rebuild" script instead of the "build" script.
     //    */
-    //   "name": "my-bulk-command",
+    "name": "start",
     // 
     //   /**
     //    * (Required) A short summary of the custom command to be shown when printing command line
     //    * help, e.g. "rush --help".
     //    */
-    //   "summary": "Example bulk custom command",
+    "summary": "Starts backend and frontend packages",
     // 
     //   /**
     //    * A detailed description of the command to be shown when printing command line
@@ -76,7 +76,7 @@
     //    * simultaneously for multiple projects.  Similar to "rush build", regardless of parallelism
     //    * projects will not start processing until their dependencies have completed processing.
     //    */
-    //   "enableParallelism": false,
+    "enableParallelism": false,
     // 
     //   /**
     //    * Normally projects will be processed according to their dependency order: a given project will not start
@@ -135,7 +135,7 @@
     //    * projects' own folders.
     //    */
     //   "disableBuildCache ": false
-    // },
+    }
     // 
     // {
     //   /**

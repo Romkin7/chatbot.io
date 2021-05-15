@@ -6,7 +6,7 @@
 
 `rush update`
 
-`rushx start`
+`rush start`
 
 ## Build for production
 

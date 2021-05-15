@@ -5,6 +5,7 @@
 	"main": "index.d.ts",
 	"typeScriptVersion": "4",
 	"scripts": {
-		"build": ""
+		"build": "",
+		"start": ""
 	}
 }

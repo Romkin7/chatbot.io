@@ -1,9 +1,30 @@
+import { config } from 'dotenv';
 import express from 'express';
-const port = process.env.PORT;
-const app = express();
-(async () => {
-	// Start express App
-	app.listen(port);
-	// tslint:disable-next-line: no-console
-	console.log(`Halkoliiteri on startattu portilla ${port}...`);
-})();
+import socketIO from 'socket.io';
+import { Server } from 'http';
+import { startChat } from './socket-io-endpoints';
+import cors from 'cors';
+config();
+class App {
+	private server: Server;
+	private port: number;
+
+	constructor(port: number) {
+		this.port = port;
+
+		const app = express();
+		app.use(cors());
+
+		this.server = new Server(app);
+		const io = new socketIO.Server(this.server);
+		startChat(io, app);
+	}
+
+	public Start() {
+		this.server.listen(this.port, () => {
+			console.log(`Server listening on port ${this.port}.`);
+		});
+	}
+}
+
+new App(Number(process.env.PORT) || 8080).Start();

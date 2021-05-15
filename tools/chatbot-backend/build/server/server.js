@@ -1,47 +1,31 @@
 'use strict';
-var __awaiter =
-	(this && this.__awaiter) ||
-	function (thisArg, _arguments, P, generator) {
-		function adopt(value) {
-			return value instanceof P
-				? value
-				: new P(function (resolve) {
-						resolve(value);
-				  });
-		}
-		return new (P || (P = Promise))(function (resolve, reject) {
-			function fulfilled(value) {
-				try {
-					step(generator.next(value));
-				} catch (e) {
-					reject(e);
-				}
-			}
-			function rejected(value) {
-				try {
-					step(generator['throw'](value));
-				} catch (e) {
-					reject(e);
-				}
-			}
-			function step(result) {
-				result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-			}
-			step((generator = generator.apply(thisArg, _arguments || [])).next());
-		});
-	};
 var __importDefault =
 	(this && this.__importDefault) ||
 	function (mod) {
 		return mod && mod.__esModule ? mod : { default: mod };
 	};
 Object.defineProperty(exports, '__esModule', { value: true });
+const dotenv_1 = require('dotenv');
 const express_1 = __importDefault(require('express'));
-const port = process.env.PORT;
-const app = express_1.default();
-(() =>
-	__awaiter(void 0, void 0, void 0, function* () {
-		app.listen(port);
-		console.log(`Halkoliiteri on startattu portilla ${port}...`);
-	}))();
+const socket_io_1 = __importDefault(require('socket.io'));
+const http_1 = require('http');
+const socket_io_endpoints_1 = require('./socket-io-endpoints');
+const cors_1 = __importDefault(require('cors'));
+dotenv_1.config();
+class App {
+	constructor(port) {
+		this.port = port;
+		const app = express_1.default();
+		app.use(cors_1.default());
+		this.server = new http_1.Server(app);
+		const io = new socket_io_1.default.Server(this.server);
+		socket_io_endpoints_1.startChat(io, app);
+	}
+	Start() {
+		this.server.listen(this.port, () => {
+			console.log(`Server listening on port ${this.port}.`);
+		});
+	}
+}
+new App(Number(process.env.PORT) || 8080).Start();
 //# sourceMappingURL=server.js.map

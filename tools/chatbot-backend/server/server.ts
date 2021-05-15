@@ -27,4 +27,4 @@ class App {
 	}
 }
 
-new App(Number(process.env.PORT) || 8080).Start();
+new App(Number(process.env.PORT)).Start();

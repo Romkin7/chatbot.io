@@ -1,7 +1,7 @@
 (this['webpackJsonpchatbot-frontend'] = this['webpackJsonpchatbot-frontend'] || []).push([
 	[3],
 	{
-		12: function (t, n, e) {
+		73: function (t, n, e) {
 			'use strict';
 			e.r(n),
 				e.d(n, 'getCLS', function () {
@@ -258,4 +258,4 @@
 		},
 	},
 ]);
-//# sourceMappingURL=3.d8514739.chunk.js.map
+//# sourceMappingURL=3.f09bb237.chunk.js.map

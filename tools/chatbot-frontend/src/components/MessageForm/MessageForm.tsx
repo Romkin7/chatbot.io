@@ -1,8 +1,10 @@
 import React, { FC, useState } from 'react';
+import Button from '../Button/Button';
 import Input from '../Input/Input';
 
 const MessageForm: FC = () => {
 	const [messageFormState, setMessageFormState] = useState({ value: '' });
+
 	return (
 		<form>
 			<Input
@@ -13,6 +15,7 @@ const MessageForm: FC = () => {
 				required
 				value={messageFormState.value}
 			/>
+			<Button color="primary" type="submit" size="md" buttonText="add" clickHandler={() => {}} />
 		</form>
 	);
 };

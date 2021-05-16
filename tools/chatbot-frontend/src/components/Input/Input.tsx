@@ -1,12 +1,22 @@
 import React, { FC } from 'react';
+import { InputTypes } from 'app-shared-types';
 
-const Input: FC = () => {
+interface IInputProps {
+	type: InputTypes;
+	label: string;
+	required: boolean;
+	disabled?: boolean;
+	name: string;
+	changeHandler: (event: any) => void;
+	value: any;
+}
+
+const Input: FC<IInputProps> = ({ type, label, required, disabled, name, changeHandler, value }) => {
 	return (
-		<div>
-			<label>
-				<input type="text" name="name" />
-			</label>
-		</div>
+		<>
+			<label htmlFor={name}>{label}</label>
+			<input id={name} type={type} className="input" onChange={changeHandler} value={value} required={required} disabled={disabled} />
+		</>
 	);
 };
 

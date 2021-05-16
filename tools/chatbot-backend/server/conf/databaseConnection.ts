@@ -1,8 +1,8 @@
 import { Pool, Client } from 'pg';
 import { config } from 'dotenv';
-import { App } from 'app-shared-types';
+import { IConnectionSettings } from 'app-shared-types';
 config();
-const connectionSettings: App.IConnectionSettings = {
+const connectionSettings: IConnectionSettings = {
 	user: process.env.USERNAME,
 	password: process.env.PASSWORD,
 	port: Number(process.env.CLOUD_PORT),

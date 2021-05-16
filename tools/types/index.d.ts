@@ -1,13 +1,18 @@
-export declare namespace App {
-	type buttonTypes = 'submit' | 'button' | 'reset';
-	type supportedInputTypes = 'text' | 'password' | 'email' | 'tel' | 'checkbox' | 'radio';
-	type supportedSizes = 'sm' | 'md' | 'lg';
-	type supportedTargetTypes = '_blank' | '_self' | '_parent' | '_top';
-	interface IConnectionSettings {
-		user: string;
-		password: string;
-		port: number;
-		host: string;
-		database: string;
-	}
+export type HeadingVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export type HeadingSizes = 'xs' | 'sm' | 'md' | 'lg' | 'xlg' | 'xxlg';
+export type Sizes = 'sm' | 'md' | 'lg';
+export type TextColors = 'black' | 'white';
+export type ButtonTypes = 'submit' | 'button' | 'reset';
+export type InputTypes = 'text' | 'password' | 'email' | 'tel' | 'checkbox' | 'radio';
+export type TargetTypes = '_blank' | '_self' | '_parent' | '_top';
+export interface IConnectionSettings {
+	user: string;
+	password: string;
+	port: number;
+	host: string;
+	database: string;
+}
+export interface IMessage {
+	text: string;
+	id: number;
 }

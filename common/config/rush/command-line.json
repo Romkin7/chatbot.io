@@ -76,7 +76,7 @@
     //    * simultaneously for multiple projects.  Similar to "rush build", regardless of parallelism
     //    * projects will not start processing until their dependencies have completed processing.
     //    */
-    "enableParallelism": false,
+    "enableParallelism": true,
     // 
     //   /**
     //    * Normally projects will be processed according to their dependency order: a given project will not start
@@ -128,7 +128,7 @@
     //    *
     //    * For details, refer to the website article "Using watch mode".
     //    */
-    //   "watchForChanges": false,
+    "watchForChanges": true,
     // 
     //   /**
     //    * (EXPERIMENTAL) Disable cache for this action. This may be useful if this command affects state outside of

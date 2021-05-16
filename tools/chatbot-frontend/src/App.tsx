@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Chat from './components/Chat/Chat';
-import './App.css';
+import './App.scss';
 
-function App() {
+const App: FC = () => {
 	return (
 		<>
-			<header></header>
-			<main>
-				<Chat />
-			</main>
+			<Chat />
 		</>
 	);
-}
+};
 
 export default App;

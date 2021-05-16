@@ -1,10 +1,14 @@
-/*! For license information please see 2.55741719.chunk.js.LICENSE.txt */
+/*! For license information please see 2.4e914560.chunk.js.LICENSE.txt */
 (this['webpackJsonpchatbot-frontend'] = this['webpackJsonpchatbot-frontend'] || []).push([
 	[2],
 	[
 		function (e, t, n) {
 			'use strict';
-			e.exports = n(70);
+			e.exports = n(39);
+		},
+		function (e, t, n) {
+			'use strict';
+			e.exports = n(34);
 		},
 		function (e, t, n) {
 			(function (r) {
@@ -177,7 +181,7 @@
 						'#FFCC33',
 					]),
 					(t.log = console.debug || console.log || function () {}),
-					(e.exports = n(41)(t)),
+					(e.exports = n(42)(t)),
 					(e.exports.formatters.j = function (e) {
 						try {
 							return JSON.stringify(e);
@@ -185,7 +189,7 @@
 							return '[UnexpectedJSONParseError]: ' + t.message;
 						}
 					});
-			}.call(this, n(40)));
+			}.call(this, n(41)));
 		},
 		function (e, t) {
 			e.exports = function (e, t) {
@@ -207,7 +211,7 @@
 			};
 		},
 		function (e, t, n) {
-			var r = n(47);
+			var r = n(48);
 			e.exports = function (e, t) {
 				if ('function' !== typeof t && null !== t) throw new TypeError('Super expression must either be null or a function');
 				(e.prototype = Object.create(t && t.prototype, { constructor: { value: e, writable: !0, configurable: !0 } })),
@@ -215,9 +219,9 @@
 			};
 		},
 		function (e, t, n) {
-			var r = n(7),
-				o = n(48),
-				i = n(49);
+			var r = n(8),
+				o = n(49),
+				i = n(50);
 			e.exports = function (e) {
 				var t = o();
 				return function () {
@@ -233,7 +237,64 @@
 		},
 		function (e, t, n) {
 			'use strict';
-			e.exports = n(34);
+			function r(e, t) {
+				(null == t || t > e.length) && (t = e.length);
+				for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
+				return r;
+			}
+			function o(e, t) {
+				return (
+					(function (e) {
+						if (Array.isArray(e)) return e;
+					})(e) ||
+					(function (e, t) {
+						if ('undefined' !== typeof Symbol && Symbol.iterator in Object(e)) {
+							var n = [],
+								r = !0,
+								o = !1,
+								i = void 0;
+							try {
+								for (
+									var a, u = e[Symbol.iterator]();
+									!(r = (a = u.next()).done) && (n.push(a.value), !t || n.length !== t);
+									r = !0
+								);
+							} catch (l) {
+								(o = !0), (i = l);
+							} finally {
+								try {
+									r || null == u.return || u.return();
+								} finally {
+									if (o) throw i;
+								}
+							}
+							return n;
+						}
+					})(e, t) ||
+					(function (e, t) {
+						if (e) {
+							if ('string' === typeof e) return r(e, t);
+							var n = Object.prototype.toString.call(e).slice(8, -1);
+							return (
+								'Object' === n && e.constructor && (n = e.constructor.name),
+								'Map' === n || 'Set' === n
+									? Array.from(e)
+									: 'Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+									? r(e, t)
+									: void 0
+							);
+						}
+					})(e, t) ||
+					(function () {
+						throw new TypeError(
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+						);
+					})()
+				);
+			}
+			n.d(t, 'a', function () {
+				return o;
+			});
 		},
 		function (e, t) {
 			function n(t) {
@@ -250,8 +311,8 @@
 			e.exports = n;
 		},
 		function (e, t, n) {
-			var r = n(55),
-				o = n(56),
+			var r = n(56),
+				o = n(57),
 				i = String.fromCharCode(30);
 			e.exports = {
 				protocol: 4,
@@ -337,7 +398,7 @@
 			e.exports = 'undefined' !== typeof self ? self : 'undefined' !== typeof window ? window : Function('return this')();
 		},
 		function (e, t, n) {
-			var r = n(59);
+			var r = n(60);
 			function o(t, n, i) {
 				return (
 					'undefined' !== typeof Reflect && Reflect.get
@@ -403,13 +464,13 @@
 				  };
 		},
 		function (e, t, n) {
-			var r = n(2),
-				o = n(3),
-				i = n(4),
-				a = n(5),
-				u = n(8),
-				l = n(9),
-				s = n(1)('engine.io-client:transport'),
+			var r = n(3),
+				o = n(4),
+				i = n(5),
+				a = n(6),
+				u = n(9),
+				l = n(10),
+				s = n(2)('engine.io-client:transport'),
 				c = (function (e) {
 					'use strict';
 					i(n, e);
@@ -502,18 +563,18 @@
 		},
 		function (e, t, n) {
 			'use strict';
-			var r = n(11),
-				o = n(7),
-				i = n(4),
-				a = n(5),
-				u = n(2),
-				l = n(3);
+			var r = n(12),
+				o = n(8),
+				i = n(5),
+				a = n(6),
+				u = n(3),
+				l = n(4);
 			Object.defineProperty(t, '__esModule', { value: !0 }), (t.Decoder = t.Encoder = t.PacketType = t.protocol = void 0);
 			var s,
-				c = n(9),
-				f = n(68),
-				d = n(28),
-				p = n(1)('socket.io-parser');
+				c = n(10),
+				f = n(69),
+				d = n(29),
+				p = n(2)('socket.io-parser');
 			(t.protocol = 5),
 				(function (e) {
 					(e[(e.CONNECT = 0)] = 'CONNECT'),
@@ -761,7 +822,7 @@
 			};
 		},
 		function (e, t, n) {
-			var r = n(17);
+			var r = n(18);
 			e.exports = function (e, t) {
 				if (e) {
 					if ('string' === typeof e) return r(e, t);
@@ -779,18 +840,18 @@
 		},
 		function (e, t, n) {
 			'use strict';
-			var r = n(2),
-				o = n(3),
-				i = n(4),
-				a = n(5);
+			var r = n(3),
+				o = n(4),
+				i = n(5),
+				a = n(6);
 			Object.defineProperty(t, '__esModule', { value: !0 }), (t.Manager = void 0);
-			var u = n(51),
-				l = n(27),
-				s = n(15),
-				c = n(29),
-				f = n(69),
-				d = n(30),
-				p = n(1)('socket.io-client:manager'),
+			var u = n(52),
+				l = n(28),
+				s = n(16),
+				c = n(30),
+				f = n(70),
+				d = n(31),
+				p = n(2)('socket.io-client:manager'),
 				h = (function (e) {
 					i(n, e);
 					var t = a(n);
@@ -1080,10 +1141,10 @@
 			};
 		},
 		function (e, t, n) {
-			var r = n(22),
-				o = n(54),
-				i = n(58),
-				a = n(60);
+			var r = n(23),
+				o = n(55),
+				i = n(59),
+				a = n(61);
 			(t.polling = function (e) {
 				var t = !1,
 					n = !1,
@@ -1100,8 +1161,8 @@
 				(t.websocket = a);
 		},
 		function (e, t, n) {
-			var r = n(53),
-				o = n(10);
+			var r = n(54),
+				o = n(11);
 			e.exports = function (e) {
 				var t = e.xdomain,
 					n = e.xscheme,
@@ -1119,15 +1180,15 @@
 			};
 		},
 		function (e, t, n) {
-			var r = n(2),
-				o = n(3),
-				i = n(4),
-				a = n(5),
-				u = n(13),
-				l = n(14),
-				s = n(8),
-				c = n(25),
-				f = n(1)('engine.io-client:polling'),
+			var r = n(3),
+				o = n(4),
+				i = n(5),
+				a = n(6),
+				u = n(14),
+				l = n(15),
+				s = n(9),
+				c = n(26),
+				f = n(2)('engine.io-client:polling'),
 				d = (function (e) {
 					'use strict';
 					i(n, e);
@@ -1298,18 +1359,18 @@
 		},
 		function (e, t, n) {
 			'use strict';
-			var r = n(67),
-				o = n(2),
-				i = n(3),
-				a = n(11),
-				u = n(7),
-				l = n(4),
-				s = n(5);
+			var r = n(68),
+				o = n(3),
+				i = n(4),
+				a = n(12),
+				u = n(8),
+				l = n(5),
+				s = n(6);
 			Object.defineProperty(t, '__esModule', { value: !0 }), (t.Socket = void 0);
-			var c = n(15),
-				f = n(29),
-				d = n(30),
-				p = n(1)('socket.io-client:socket'),
+			var c = n(16),
+				f = n(30),
+				d = n(31),
+				p = n(2)('socket.io-client:socket'),
 				h = Object.freeze({ connect: 1, connect_error: 1, disconnect: 1, disconnecting: 1, newListener: 1, removeListener: 1 }),
 				y = (function (e) {
 					l(n, e);
@@ -1683,12 +1744,12 @@
 		},
 		function (e, t, n) {
 			'use strict';
-			var r = n(2),
-				o = n(3),
-				i = n(11),
-				a = n(7),
-				u = n(4),
-				l = n(5);
+			var r = n(3),
+				o = n(4),
+				i = n(12),
+				a = n(8),
+				u = n(5),
+				l = n(6);
 			Object.defineProperty(t, '__esModule', { value: !0 }), (t.StrictEventEmitter = void 0);
 			var s = (function (e) {
 				u(n, e);
@@ -1735,7 +1796,7 @@
 					]),
 					n
 				);
-			})(n(9));
+			})(n(10));
 			t.StrictEventEmitter = s;
 		},
 		function (e, t, n) {
@@ -1753,9 +1814,9 @@
 		function (e, t, n) {
 			'use strict';
 			Object.defineProperty(t, '__esModule', { value: !0 }), (t.io = t.Socket = t.Manager = t.protocol = void 0);
-			var r = n(39),
-				o = n(19),
-				i = n(1)('socket.io-client');
+			var r = n(40),
+				o = n(20),
+				i = n(2)('socket.io-client');
 			e.exports = t = u;
 			var a = (t.managers = {});
 			function u(e, t) {
@@ -1775,7 +1836,7 @@
 				);
 			}
 			t.io = u;
-			var l = n(15);
+			var l = n(16);
 			Object.defineProperty(t, 'protocol', {
 				enumerable: !0,
 				get: function () {
@@ -1783,14 +1844,14 @@
 				},
 			}),
 				(t.connect = u);
-			var s = n(19);
+			var s = n(20);
 			Object.defineProperty(t, 'Manager', {
 				enumerable: !0,
 				get: function () {
 					return s.Manager;
 				},
 			});
-			var c = n(27);
+			var c = n(28);
 			Object.defineProperty(t, 'Socket', {
 				enumerable: !0,
 				get: function () {
@@ -1801,68 +1862,7 @@
 		},
 		function (e, t, n) {
 			'use strict';
-			function r(e, t) {
-				(null == t || t > e.length) && (t = e.length);
-				for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
-				return r;
-			}
-			function o(e, t) {
-				return (
-					(function (e) {
-						if (Array.isArray(e)) return e;
-					})(e) ||
-					(function (e, t) {
-						if ('undefined' !== typeof Symbol && Symbol.iterator in Object(e)) {
-							var n = [],
-								r = !0,
-								o = !1,
-								i = void 0;
-							try {
-								for (
-									var a, u = e[Symbol.iterator]();
-									!(r = (a = u.next()).done) && (n.push(a.value), !t || n.length !== t);
-									r = !0
-								);
-							} catch (l) {
-								(o = !0), (i = l);
-							} finally {
-								try {
-									r || null == u.return || u.return();
-								} finally {
-									if (o) throw i;
-								}
-							}
-							return n;
-						}
-					})(e, t) ||
-					(function (e, t) {
-						if (e) {
-							if ('string' === typeof e) return r(e, t);
-							var n = Object.prototype.toString.call(e).slice(8, -1);
-							return (
-								'Object' === n && e.constructor && (n = e.constructor.name),
-								'Map' === n || 'Set' === n
-									? Array.from(e)
-									: 'Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
-									? r(e, t)
-									: void 0
-							);
-						}
-					})(e, t) ||
-					(function () {
-						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
-						);
-					})()
-				);
-			}
-			n.d(t, 'a', function () {
-				return o;
-			});
-		},
-		function (e, t, n) {
-			'use strict';
-			var r = n(12),
+			var r = n(13),
 				o = 60103,
 				i = 60106;
 			(t.Fragment = 60107), (t.StrictMode = 60108), (t.Profiler = 60114);
@@ -2186,8 +2186,8 @@
 		},
 		function (e, t, n) {
 			'use strict';
-			var r = n(6),
-				o = n(12),
+			var r = n(1),
+				o = n(13),
 				i = n(36);
 			function a(e) {
 				for (var t = 'https://reactjs.org/docs/error-decoder.html?invariant=' + e, n = 1; n < arguments.length; n++)
@@ -8895,9 +8895,33 @@
 		,
 		function (e, t, n) {
 			'use strict';
+			n(13);
+			var r = n(1),
+				o = 60103;
+			if (((t.Fragment = 60107), 'function' === typeof Symbol && Symbol.for)) {
+				var i = Symbol.for;
+				(o = i('react.element')), (t.Fragment = i('react.fragment'));
+			}
+			var a = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
+				u = Object.prototype.hasOwnProperty,
+				l = { key: !0, ref: !0, __self: !0, __source: !0 };
+			function s(e, t, n) {
+				var r,
+					i = {},
+					s = null,
+					c = null;
+				for (r in (void 0 !== n && (s = '' + n), void 0 !== t.key && (s = '' + t.key), void 0 !== t.ref && (c = t.ref), t))
+					u.call(t, r) && !l.hasOwnProperty(r) && (i[r] = t[r]);
+				if (e && e.defaultProps) for (r in (t = e.defaultProps)) void 0 === i[r] && (i[r] = t[r]);
+				return { $$typeof: o, type: e, key: s, ref: c, props: i, _owner: a.current };
+			}
+			(t.jsx = s), (t.jsxs = s);
+		},
+		function (e, t, n) {
+			'use strict';
 			Object.defineProperty(t, '__esModule', { value: !0 }), (t.url = void 0);
-			var r = n(16),
-				o = n(1)('socket.io-client:url');
+			var r = n(17),
+				o = n(2)('socket.io-client:url');
 			t.url = function (e) {
 				var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '',
 					n = arguments.length > 2 ? arguments[2] : void 0,
@@ -9032,7 +9056,7 @@
 				});
 		},
 		function (e, t, n) {
-			var r = n(42);
+			var r = n(43);
 			e.exports = function (e) {
 				function t(e) {
 					var n,
@@ -9133,7 +9157,7 @@
 						for (n = 0, r = t.names.length; n < r; n++) if (t.names[n].test(e)) return !0;
 						return !1;
 					}),
-					(t.humanize = n(46)),
+					(t.humanize = n(47)),
 					(t.destroy = function () {
 						console.warn(
 							'Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.',
@@ -9155,16 +9179,16 @@
 			};
 		},
 		function (e, t, n) {
-			var r = n(43),
-				o = n(44),
-				i = n(18),
-				a = n(45);
+			var r = n(44),
+				o = n(45),
+				i = n(19),
+				a = n(46);
 			e.exports = function (e) {
 				return r(e) || o(e) || i(e) || a();
 			};
 		},
 		function (e, t, n) {
-			var r = n(17);
+			var r = n(18);
 			e.exports = function (e) {
 				if (Array.isArray(e)) return r(e);
 			};
@@ -9294,8 +9318,8 @@
 			};
 		},
 		function (e, t, n) {
-			var r = n(50),
-				o = n(20);
+			var r = n(51),
+				o = n(21);
 			e.exports = function (e, t) {
 				return !t || ('object' !== r(t) && 'function' !== typeof t) ? o(e) : t;
 			};
@@ -9320,27 +9344,27 @@
 			e.exports = n;
 		},
 		function (e, t, n) {
-			var r = n(52);
+			var r = n(53);
 			(e.exports = function (e, t) {
 				return new r(e, t);
 			}),
 				(e.exports.Socket = r),
 				(e.exports.protocol = r.protocol),
-				(e.exports.Transport = n(13)),
-				(e.exports.transports = n(21)),
-				(e.exports.parser = n(8));
+				(e.exports.Transport = n(14)),
+				(e.exports.transports = n(22)),
+				(e.exports.parser = n(9));
 		},
 		function (e, t, n) {
-			var r = n(2),
-				o = n(3),
-				i = n(4),
-				a = n(5),
-				u = n(21),
-				l = n(9),
-				s = n(1)('engine.io-client:socket'),
-				c = n(8),
-				f = n(16),
-				d = n(14),
+			var r = n(3),
+				o = n(4),
+				i = n(5),
+				a = n(6),
+				u = n(22),
+				l = n(10),
+				s = n(2)('engine.io-client:socket'),
+				c = n(9),
+				f = n(17),
+				d = n(15),
 				p = (function (e) {
 					'use strict';
 					i(n, e);
@@ -9738,16 +9762,16 @@
 			}
 		},
 		function (e, t, n) {
-			var r = n(2),
-				o = n(3),
-				i = n(4),
-				a = n(5),
-				u = n(22),
-				l = n(23),
-				s = n(9),
-				c = n(26).pick,
-				f = n(10),
-				d = n(1)('engine.io-client:polling-xhr');
+			var r = n(3),
+				o = n(4),
+				i = n(5),
+				a = n(6),
+				u = n(23),
+				l = n(24),
+				s = n(10),
+				c = n(27).pick,
+				f = n(11),
+				d = n(2)('engine.io-client:polling-xhr');
 			function p() {}
 			var h = null != new u({ xdomain: !1 }).responseType,
 				y = (function (e) {
@@ -9951,7 +9975,7 @@
 			(e.exports = y), (e.exports.Request = v);
 		},
 		function (e, t, n) {
-			var r = n(24).PACKET_TYPES,
+			var r = n(25).PACKET_TYPES,
 				o =
 					'function' === typeof Blob ||
 					('undefined' !== typeof Blob && '[object BlobConstructor]' === Object.prototype.toString.call(Blob)),
@@ -9986,10 +10010,10 @@
 		},
 		function (e, t, n) {
 			var r,
-				o = n(24),
+				o = n(25),
 				i = o.PACKET_TYPES_REVERSE,
 				a = o.ERROR_PACKET;
-			'function' === typeof ArrayBuffer && (r = n(57));
+			'function' === typeof ArrayBuffer && (r = n(58));
 			var u = function (e, t) {
 					if (r) {
 						var n = r.decode(e);
@@ -10061,15 +10085,15 @@
 		},
 		function (e, t, n) {
 			var r,
-				o = n(2),
-				i = n(3),
-				a = n(20),
-				u = n(11),
-				l = n(7),
-				s = n(4),
-				c = n(5),
-				f = n(23),
-				d = n(10),
+				o = n(3),
+				i = n(4),
+				a = n(21),
+				u = n(12),
+				l = n(8),
+				s = n(5),
+				c = n(6),
+				f = n(24),
+				d = n(11),
 				p = /\n/g,
 				h = /\\n/g,
 				y = (function (e) {
@@ -10189,7 +10213,7 @@
 			e.exports = y;
 		},
 		function (e, t, n) {
-			var r = n(7);
+			var r = n(8);
 			e.exports = function (e, t) {
 				for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = r(e)); );
 				return e;
@@ -10197,20 +10221,20 @@
 		},
 		function (e, t, n) {
 			(function (t) {
-				var r = n(2),
-					o = n(3),
-					i = n(4),
-					a = n(5),
-					u = n(13),
-					l = n(8),
-					s = n(14),
-					c = n(25),
-					f = n(26).pick,
-					d = n(66),
+				var r = n(3),
+					o = n(4),
+					i = n(5),
+					a = n(6),
+					u = n(14),
+					l = n(9),
+					s = n(15),
+					c = n(26),
+					f = n(27).pick,
+					d = n(67),
 					p = d.WebSocket,
 					h = d.usingBrowserWebSocket,
 					y = d.defaultBinaryType,
-					v = n(1)('engine.io-client:websocket'),
+					v = n(2)('engine.io-client:websocket'),
 					m =
 						'undefined' !== typeof navigator &&
 						'string' === typeof navigator.product &&
@@ -10366,14 +10390,14 @@
 						);
 					})(u);
 				e.exports = g;
-			}.call(this, n(61).Buffer));
+			}.call(this, n(62).Buffer));
 		},
 		function (e, t, n) {
 			'use strict';
 			(function (e) {
-				var r = n(63),
-					o = n(64),
-					i = n(65);
+				var r = n(64),
+					o = n(65),
+					i = n(66);
 				function a() {
 					return l.TYPED_ARRAY_SUPPORT ? 2147483647 : 1073741823;
 				}
@@ -11294,7 +11318,7 @@
 					for (var o = 0; o < r && !(o + n >= t.length || o >= e.length); ++o) t[o + n] = e[o];
 					return o;
 				}
-			}.call(this, n(62)));
+			}.call(this, n(63)));
 		},
 		function (e, t) {
 			var n;
@@ -11437,11 +11461,11 @@
 				};
 		},
 		function (e, t, n) {
-			var r = n(10);
+			var r = n(11);
 			e.exports = { WebSocket: r.WebSocket || r.MozWebSocket, usingBrowserWebSocket: !0, defaultBinaryType: 'arraybuffer' };
 		},
 		function (e, t, n) {
-			var r = n(18);
+			var r = n(19);
 			e.exports = function (e, t) {
 				var n;
 				if ('undefined' === typeof Symbol || null == e[Symbol.iterator]) {
@@ -11491,7 +11515,7 @@
 		function (e, t, n) {
 			'use strict';
 			Object.defineProperty(t, '__esModule', { value: !0 }), (t.reconstructPacket = t.deconstructPacket = void 0);
-			var r = n(28);
+			var r = n(29);
 			function o(e, t) {
 				if (!e) return e;
 				if (r.isBinary(e)) {
@@ -11558,30 +11582,6 @@
 					this.jitter = e;
 				});
 		},
-		function (e, t, n) {
-			'use strict';
-			n(12);
-			var r = n(6),
-				o = 60103;
-			if (((t.Fragment = 60107), 'function' === typeof Symbol && Symbol.for)) {
-				var i = Symbol.for;
-				(o = i('react.element')), (t.Fragment = i('react.fragment'));
-			}
-			var a = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
-				u = Object.prototype.hasOwnProperty,
-				l = { key: !0, ref: !0, __self: !0, __source: !0 };
-			function s(e, t, n) {
-				var r,
-					i = {},
-					s = null,
-					c = null;
-				for (r in (void 0 !== n && (s = '' + n), void 0 !== t.key && (s = '' + t.key), void 0 !== t.ref && (c = t.ref), t))
-					u.call(t, r) && !l.hasOwnProperty(r) && (i[r] = t[r]);
-				if (e && e.defaultProps) for (r in (t = e.defaultProps)) void 0 === i[r] && (i[r] = t[r]);
-				return { $$typeof: o, type: e, key: s, ref: c, props: i, _owner: a.current };
-			}
-			(t.jsx = s), (t.jsxs = s);
-		},
 	],
 ]);
-//# sourceMappingURL=2.55741719.chunk.js.map
+//# sourceMappingURL=2.4e914560.chunk.js.map

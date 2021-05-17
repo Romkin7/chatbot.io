@@ -16,3 +16,6 @@ export interface IMessage {
 	text: string;
 	id: number;
 }
+export interface IIncomingMessage {
+	text: string;
+}

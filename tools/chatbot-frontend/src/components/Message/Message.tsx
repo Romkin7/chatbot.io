@@ -7,9 +7,18 @@ interface IMessageProps {
 
 const Message: FC<IMessageProps> = ({ message }) => {
 	return (
-		<p>
-			Today's date is: <time dateTime={message.text}>{message.text}</time>
-		</p>
+		<>
+			{message.text ? (
+				<p>
+					<time dateTime={new Date().toLocaleDateString('fi') + ' ' + new Date().toLocaleTimeString('fi')}>
+						{new Date().toLocaleDateString('fi') + ' ' + new Date().toLocaleTimeString('fi')}{' '}
+					</time>{' '}
+					{message.text}
+				</p>
+			) : (
+				<span></span>
+			)}
+		</>
 	);
 };
 

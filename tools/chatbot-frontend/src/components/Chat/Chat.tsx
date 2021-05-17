@@ -1,38 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import Message from '../Message/Message';
 import MessageForm from '../MessageForm/MessageForm';
-import socketIOClient from 'socket.io-client';
+import socketIOClient, { Socket } from 'socket.io-client';
+import { IMessage } from 'app-shared-types';
 const ENDPOINT = 'http://127.0.0.1:8080';
+let socket: Socket;
 
-function Chat() {
-	const [name, setName] = useState('');
-	const [room, setRoom] = useState('');
-	const [users, setUsers] = useState('');
-	const [message, setMessage] = useState({ id: 0, text: '' });
-	const [messages, setMessages] = useState([]);
-	const [flag, setFlag] = useState(0);
+const Chat: FC = () => {
+	const [messages, setMessages] = useState<IMessage[]>([{ id: 0, text: '' }]);
 
 	useEffect(() => {
-		const socket = socketIOClient(ENDPOINT, {
+		socket = socketIOClient(ENDPOINT, {
 			withCredentials: true,
 			extraHeaders: {
 				'my-company': 'halkoliiteri.com',
 			},
 		});
-		socket.on('add-message', (data: string) => {
-			setMessage({ id: 1, text: data });
+		socket?.on('add-message', (message: string) => {
+			setMessages((messages) => [...messages, { id: Date.now(), text: message }]);
 		});
-		socket.on('new-message', (data) => {
-			setMessages(data);
+		socket?.on('broadcast', (message: string) => {
+			setMessages((messages) => [...messages, { id: Date.now(), text: message }]);
 		});
+		// CLEAN UP THE EFFECT
+		return () => socket?.disconnect() as any;
 	}, []);
 
+	const addMessage = (text: string) => {
+		socket?.emit('new-message', { text });
+	};
 	return (
 		<>
-			<Message message={message} />
-			<MessageForm />
+			{messages.map((message: IMessage) => {
+				return <Message key={message.id} message={message} />;
+			})}
+			<MessageForm setMessage={addMessage} />
 		</>
 	);
-}
+};
 
 export default Chat;

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { InputTypes } from 'app-shared-types';
 
 interface IInputProps {
@@ -8,14 +8,26 @@ interface IInputProps {
 	disabled?: boolean;
 	name: string;
 	changeHandler: (event: any) => void;
-	value: any;
 }
 
-const Input: FC<IInputProps> = ({ type, label, required, disabled, name, changeHandler, value }) => {
+const Input: FC<IInputProps> = ({ type, label, required, disabled, name, changeHandler }) => {
+	const [value, setValue] = useState<string>('');
+	const handleChange = (event: any) => {
+		changeHandler(event.target.value);
+		setValue(event.target.value);
+	};
 	return (
 		<>
 			<label htmlFor={name}>{label}</label>
-			<input id={name} type={type} className="input" onChange={changeHandler} value={value} required={required} disabled={disabled} />
+			<input
+				id={name}
+				type={type}
+				className="input"
+				onInput={(event: any) => handleChange(event)}
+				value={value}
+				required={required}
+				disabled={disabled}
+			/>
 		</>
 	);
 };

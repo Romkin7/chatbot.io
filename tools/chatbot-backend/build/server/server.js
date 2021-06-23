@@ -10,7 +10,6 @@ const express_1 = __importDefault(require('express'));
 const socket_io_1 = __importDefault(require('socket.io'));
 const http_1 = require('http');
 const socket_io_endpoints_1 = require('./socket-io-endpoints');
-const cors_1 = __importDefault(require('cors'));
 dotenv_1.config();
 const app = express_1.default();
 const httpServer = new http_1.Server(app);
@@ -26,7 +25,9 @@ socket_io_endpoints_1.startChat(io, app);
 app.set('trust proxy', true);
 app.set('port', process.env.PORT || 8080);
 app.set('ip', process.env.IP || '127.0.0.1');
-app.use(cors_1.default());
+app.get('/', (req, res) => {
+	return res.send('Hello world');
+});
 httpServer.listen(app.get('port'), app.get('ip'), () => {
 	console.log(`Server listening on port ${app.get('port')}.`);
 });

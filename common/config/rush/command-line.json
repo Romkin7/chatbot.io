@@ -23,6 +23,14 @@
       "shellCommand": "pretty-quick --staged"
     },
     {
+      "name": "start:windows",
+      "commandKind": "bulk",
+      "summary": "Starts backend and frontend packages on Windows system",
+      "enableParallelism": true,
+
+      "watchForChanges": true
+    },
+    {
     //   /**
     //    * (Required) Determines the type of custom command.
     //    * Rush's "bulk" commands are invoked separately for each project.  Rush will look in

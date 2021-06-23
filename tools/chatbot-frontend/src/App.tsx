@@ -5,6 +5,7 @@ import './App.scss';
 const App: FC = () => {
 	return (
 		<>
+			<h1>Chtabot.io</h1>
 			<Chat />
 		</>
 	);

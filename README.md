@@ -6,7 +6,13 @@
 
 `rush update`
 
+**Mac Users**
+
 `rush start`
+
+**Windows Users**
+
+`rush start:windows`
 
 ## Build for production
 

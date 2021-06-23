@@ -137,7 +137,7 @@
 					(n(74),
 					function () {
 						return Object(l.jsxs)(l.Fragment, {
-							children: [Object(l.jsx)('h1', { children: 'Chtabot.io' }), Object(l.jsx)(O, {})],
+							children: [Object(l.jsx)('h1', { children: 'Chatbot.io' }), Object(l.jsx)(O, {})],
 						});
 					}),
 				x = function (e) {
@@ -160,4 +160,4 @@
 	},
 	[[75, 1, 2]],
 ]);
-//# sourceMappingURL=main.45b2bbfa.chunk.js.map
+//# sourceMappingURL=main.3dc62387.chunk.js.map

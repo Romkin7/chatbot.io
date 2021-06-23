@@ -4,8 +4,9 @@
 	"description": "Socket.io NodeJS Chatbot backend",
 	"main": "build/server.js",
 	"scripts": {
-		"start": "tsc -w & nodemon build/server/server.js",
-		"build": "node_modules/.bin/rimraf build && tsc",
+		"start": "yarn build && tsc -w & nodemon build/server/server.js",
+		"start:windows": "yarn build && tsc -w | nodemon build/server/server.js",
+		"build": "rimraf build && tsc",
 		"test": "jest --coverage --colors",
 		"test:watch": "jest --coverage --colors --watchAll"
 	},

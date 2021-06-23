@@ -85,7 +85,7 @@
 					});
 				},
 				m = n(36),
-				g = n.n(m),
+				h = n.n(m),
 				O = function () {
 					var e = Object(r.useState)([{ id: 0, text: '' }]),
 						t = Object(u.a)(e, 2),
@@ -96,7 +96,7 @@
 						return (
 							null ===
 								(e = c =
-									g()('http://127.0.0.1:8080', {
+									h()('http://127.0.0.1:8080', {
 										withCredentials: !0,
 										extraHeaders: { 'my-company': 'halkoliiteri.com' },
 									})) ||
@@ -133,10 +133,12 @@
 						],
 					});
 				},
-				h =
+				g =
 					(n(74),
 					function () {
-						return Object(l.jsx)(l.Fragment, { children: Object(l.jsx)(O, {}) });
+						return Object(l.jsxs)(l.Fragment, {
+							children: [Object(l.jsx)('h1', { children: 'Chtabot.io' }), Object(l.jsx)(O, {})],
+						});
 					}),
 				x = function (e) {
 					e &&
@@ -153,9 +155,9 @@
 								n(e), c(e), r(e), a(e), i(e);
 							});
 				};
-			o.a.render(Object(l.jsx)(a.a.StrictMode, { children: Object(l.jsx)(h, {}) }), document.getElementById('root')), x();
+			o.a.render(Object(l.jsx)(a.a.StrictMode, { children: Object(l.jsx)(g, {}) }), document.getElementById('root')), x();
 		},
 	},
 	[[75, 1, 2]],
 ]);
-//# sourceMappingURL=main.4e749e5b.chunk.js.map
+//# sourceMappingURL=main.45b2bbfa.chunk.js.map

@@ -6,6 +6,7 @@
 	"typeScriptVersion": "4",
 	"scripts": {
 		"build": "",
-		"start": ""
+		"start": "",
+		"start:windows": ""
 	}
 }

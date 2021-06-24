@@ -10,6 +10,7 @@
 		"test": "jest --coverage --colors",
 		"test:watch": "jest --coverage --colors --watchAll"
 	},
+	"licence": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/Romkin7/chatbot.io.git"

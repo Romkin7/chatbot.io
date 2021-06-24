@@ -391,8 +391,8 @@
 			"projectFolder": "tools/chatbot-frontend"
 		},
 		{
-			"packageName": "dashboard",
-			"projectFolder": "tools/dashboard"
+			"packageName": "chatbot-dashboard",
+			"projectFolder": "tools/chatbot-dashboard"
 		},
 		{
 			"packageName": "assets",

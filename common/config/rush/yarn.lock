@@ -1375,9 +1375,9 @@
   version "0.0.0"
   resolved "file:./projects/assets.tgz"
 
-"@rush-temp/chatbot-backend@file:./projects/chatbot-backend.tgz":
+"@rush-temp/backend@file:./projects/backend.tgz":
   version "0.0.0"
-  resolved "file:./projects/chatbot-backend.tgz"
+  resolved "file:./projects/backend.tgz#e521f6a0abb4a1f78b7a1c8745aa528e22ffb752"
   dependencies:
     "@types/body-parser" "1.16.4"
     "@types/dotenv" "4.0.0"
@@ -1402,9 +1402,9 @@
     tslib "2.1.0"
     typescript "4.1.2"
 
-"@rush-temp/chatbot-dashboard@file:./projects/chatbot-dashboard.tgz":
+"@rush-temp/dashboard@file:./projects/dashboard.tgz":
   version "0.0.0"
-  resolved "file:./projects/chatbot-dashboard.tgz"
+  resolved "file:./projects/dashboard.tgz#af36185ef3109fd723d25e060bf9d332ca0a8f45"
   dependencies:
     "@testing-library/jest-dom" "5.11.4"
     "@testing-library/react" "11.1.0"
@@ -1422,9 +1422,9 @@
     typescript "4.1.2"
     web-vitals "1.0.1"
 
-"@rush-temp/chatbot-frontend@file:./projects/chatbot-frontend.tgz":
+"@rush-temp/geniobot@file:./projects/geniobot.tgz":
   version "0.0.0"
-  resolved "file:./projects/chatbot-frontend.tgz"
+  resolved "file:./projects/geniobot.tgz#716cbe285806799b14a59e12367a337215ec58c2"
   dependencies:
     "@testing-library/jest-dom" "5.11.4"
     "@testing-library/react" "11.1.0"

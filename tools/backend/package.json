@@ -1,7 +1,7 @@
 {
-	"name": "chatbot-backend",
+	"name": "backend",
 	"version": "1.0.0",
-	"description": "Socket.io NodeJS Chatbot backend",
+	"description": "Socket.io NodeJS GenioBot backend",
 	"main": "build/server.js",
 	"scripts": {
 		"start": "yarn build && tsc -w & nodemon build/server/server.js",

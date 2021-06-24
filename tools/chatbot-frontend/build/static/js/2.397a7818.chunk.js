@@ -1,4 +1,4 @@
-/*! For license information please see 2.05c01e86.chunk.js.LICENSE.txt */
+/*! For license information please see 2.397a7818.chunk.js.LICENSE.txt */
 (this['webpackJsonpchatbot-frontend'] = this['webpackJsonpchatbot-frontend'] || []).push([
 	[2],
 	[
@@ -11623,4 +11623,4 @@
 		},
 	],
 ]);
-//# sourceMappingURL=2.05c01e86.chunk.js.map
+//# sourceMappingURL=2.397a7818.chunk.js.map

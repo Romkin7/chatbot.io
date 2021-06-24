@@ -19,3 +19,40 @@ export interface IMessage {
 export interface IIncomingMessage {
 	text: string;
 }
+/** Company Settings types */
+interface ILogo {
+	src: string;
+	alt: string;
+}
+type Statuses = 'Paid' | 'Open invoice';
+type PlanType = 'free' | 'pro';
+export interface IInvoice {
+	invoiceNumber: string;
+	dueDate: Date;
+	paymentDate: Date;
+	sum: number;
+}
+export interface IFullInvoice extends IInvoice {
+	status: Statuses;
+	createdAt: Date;
+	updatedAt: Date;
+}
+interface ILastInvoice {
+	invoiceNumber: string;
+}
+export interface IInvoiceAdminView extends IFullInvoice {
+	uname: string;
+	uemail: string;
+	uwebsite: string;
+	purchaseDate: Date;
+	lastInvoice: ILastInvoice;
+}
+/** Company settings types */
+export interface ICompanySettings {
+	primaryColor: string;
+	companyName: string;
+	displayName: string;
+	logo: ILogo;
+	plan: PlanType;
+	invoices: IInvoice[];
+}

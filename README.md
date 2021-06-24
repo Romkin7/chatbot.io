@@ -1,4 +1,4 @@
-# Chatbot.io
+# GenioBot.io
 
 <img src="tools/assets/images/app-plan.png" />
 

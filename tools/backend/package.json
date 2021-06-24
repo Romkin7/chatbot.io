@@ -1,7 +1,7 @@
 {
-	"name": "chatbot-backend",
+	"name": "backend",
 	"version": "1.0.0",
-	"description": "Socket.io NodeJS Chatbot backend",
+	"description": "Socket.io NodeJS GenioBot backend",
 	"main": "build/server.js",
 	"scripts": {
 		"start": "yarn build && tsc -w & nodemon build/server/server.js",
@@ -13,7 +13,7 @@
 	"licence": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/Romkin7/chatbot.io.git"
+		"url": "git@github.com:Romkin7/geniobot.io.git"
 	},
 	"keywords": [
 		"NodeJS",
@@ -50,7 +50,7 @@
 	"author": "Roman Tuoimisto",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/Romkin7/chatbot.io/issues"
+		"url": "https://github.com/Romkin7/geniobot.io.git/issues"
 	},
-	"homepage": "https://github.com/Romkin7/chatbot.io#readme"
+	"homepage": "https://github.com/Romkin7/geniobot.io#readme"
 }

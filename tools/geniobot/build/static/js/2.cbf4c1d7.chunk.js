@@ -1,10 +1,5 @@
-<<<<<<< HEAD:tools/geniobot/build/static/js/2.397a7818.chunk.js
-/*! For license information please see 2.397a7818.chunk.js.LICENSE.txt */
-(this['webpackJsonpchatbot-frontend'] = this['webpackJsonpchatbot-frontend'] || []).push([
-=======
-/*! For license information please see 2.b3a0f648.chunk.js.LICENSE.txt */
+/*! For license information please see 2.cbf4c1d7.chunk.js.LICENSE.txt */
 (this.webpackJsonpgeniobot = this.webpackJsonpgeniobot || []).push([
->>>>>>> ad5cac1 (change names):tools/geniobot/build/static/js/2.b3a0f648.chunk.js
 	[2],
 	[
 		function (e, t, n) {
@@ -11628,8 +11623,4 @@
 		},
 	],
 ]);
-<<<<<<< HEAD:tools/geniobot/build/static/js/2.397a7818.chunk.js
-//# sourceMappingURL=2.397a7818.chunk.js.map
-=======
-//# sourceMappingURL=2.b3a0f648.chunk.js.map
->>>>>>> ad5cac1 (change names):tools/geniobot/build/static/js/2.b3a0f648.chunk.js
+//# sourceMappingURL=2.cbf4c1d7.chunk.js.map

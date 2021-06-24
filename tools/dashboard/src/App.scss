@@ -1,0 +1,26 @@
+body {
+	background-image: linear-gradient(180deg, rgba(38, 34, 80, 0.65) 0%, rgba(27, 25, 66, 0.85) 57.44%, #17163b 100%),
+		radial-gradient(50% 50% at 50% 50%, #201d47 0%, rgba(23, 21, 58, 0.91) 100%);
+	background-repeat: no-repeat;
+	height: 100vh;
+	background-attachment: fixed;
+}
+
+header,
+main {
+	padding-left: 30vw;
+}
+
+main {
+	min-height: 70vh;
+}
+
+aside {
+	width: 30vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	background: linear-gradient(180deg, rgba(48, 43, 100, 0.65) 0%, rgba(30, 28, 72, 0.85) 58.85%, #191841 100%);
+}

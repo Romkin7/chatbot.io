@@ -383,16 +383,16 @@
 	 */
 	"projects": [
 		{
-			"packageName": "chatbot-backend",
-			"projectFolder": "tools/chatbot-backend"
+			"packageName": "backend",
+			"projectFolder": "tools/backend"
 		},
 		{
-			"packageName": "chatbot-frontend",
-			"projectFolder": "tools/chatbot-frontend"
+			"packageName": "geniobot",
+			"projectFolder": "tools/geniobot"
 		},
 		{
-			"packageName": "chatbot-dashboard",
-			"projectFolder": "tools/chatbot-dashboard"
+			"packageName": "dashboard",
+			"projectFolder": "tools/dashboard"
 		},
 		{
 			"packageName": "assets",

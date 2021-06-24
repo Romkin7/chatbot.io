@@ -1,4 +1,4 @@
-(this['webpackJsonpchatbot-frontend'] = this['webpackJsonpchatbot-frontend'] || []).push([
+(this.webpackJsonpgeniobot = this.webpackJsonpgeniobot || []).push([
 	[0],
 	{
 		41: function (e, t, n) {},
@@ -7,10 +7,10 @@
 			'use strict';
 			n.r(t);
 			var c,
-				r = n(1),
-				a = n.n(r),
-				i = n(35),
-				o = n.n(i),
+				i = n(1),
+				r = n.n(i),
+				a = n(35),
+				o = n.n(a),
 				s = (n(41), n(19)),
 				u = n(8),
 				l = n(0),
@@ -35,25 +35,25 @@
 					var t = e.type,
 						n = e.color,
 						c = e.children,
-						r = e.size;
-					return Object(l.jsx)('button', { type: t, className: 'button button_' + n + ' ' + r, children: c });
+						i = e.size;
+					return Object(l.jsx)('button', { type: t, className: 'button button_' + n + ' ' + i, children: c });
 				},
 				b = function (e) {
 					var t = e.type,
 						n = e.label,
 						c = e.required,
-						a = e.disabled,
-						i = e.name,
+						r = e.disabled,
+						a = e.name,
 						o = e.changeHandler,
-						s = Object(r.useState)(''),
+						s = Object(i.useState)(''),
 						d = Object(u.a)(s, 2),
 						j = d[0],
 						b = d[1];
 					return Object(l.jsxs)(l.Fragment, {
 						children: [
-							Object(l.jsx)('label', { htmlFor: i, children: n }),
+							Object(l.jsx)('label', { htmlFor: a, children: n }),
 							Object(l.jsx)('input', {
-								id: i,
+								id: a,
 								type: t,
 								className: 'input',
 								onInput: function (e) {
@@ -63,53 +63,53 @@
 								},
 								value: j,
 								required: c,
-								disabled: a,
+								disabled: r,
 							}),
 						],
 					});
 				},
 				f = function (e) {
 					var t = e.setMessage,
-						n = Object(r.useState)(''),
+						n = Object(i.useState)(''),
 						c = Object(u.a)(n, 2),
-						a = c[0],
-						i = c[1];
+						r = c[0],
+						a = c[1];
 					return Object(l.jsxs)('form', {
 						onSubmit: function (e) {
-							e.preventDefault(), t(a);
+							e.preventDefault(), t(r);
 						},
 						children: [
-							Object(l.jsx)(b, { label: 'new message', name: 'message', type: 'text', changeHandler: i, required: !0 }),
+							Object(l.jsx)(b, { label: 'new message', name: 'message', type: 'text', changeHandler: a, required: !0 }),
 							Object(l.jsx)(j, { color: 'primary', type: 'submit', size: 'md', children: 'Add' }),
 						],
 					});
 				},
 				m = n(36),
-				h = n.n(m),
+				g = n.n(m),
 				O = function () {
-					var e = Object(r.useState)([{ id: 0, text: '' }]),
+					var e = Object(i.useState)([{ id: 0, text: '' }]),
 						t = Object(u.a)(e, 2),
 						n = t[0],
-						a = t[1];
-					Object(r.useEffect)(function () {
+						r = t[1];
+					Object(i.useEffect)(function () {
 						var e, t;
 						return (
 							null ===
 								(e = c =
-									h()('http://127.0.0.1:8080', {
+									g()('http://127.0.0.1:8080', {
 										withCredentials: !0,
 										extraHeaders: { 'my-company': 'halkoliiteri.com' },
 									})) ||
 								void 0 === e ||
 								e.on('add-message', function (e) {
-									a(function (t) {
+									r(function (t) {
 										return [].concat(Object(s.a)(t), [{ id: Date.now(), text: e }]);
 									});
 								}),
 							null === (t = c) ||
 								void 0 === t ||
 								t.on('broadcast', function (e) {
-									a(function (t) {
+									r(function (t) {
 										return [].concat(Object(s.a)(t), [{ id: Date.now(), text: e }]);
 									});
 								}),
@@ -133,7 +133,7 @@
 						],
 					});
 				},
-				g =
+				h =
 					(n(74),
 					function () {
 						return Object(l.jsxs)(l.Fragment, {
@@ -149,15 +149,19 @@
 							.then(function (t) {
 								var n = t.getCLS,
 									c = t.getFID,
-									r = t.getFCP,
-									a = t.getLCP,
-									i = t.getTTFB;
-								n(e), c(e), r(e), a(e), i(e);
+									i = t.getFCP,
+									r = t.getLCP,
+									a = t.getTTFB;
+								n(e), c(e), i(e), r(e), a(e);
 							});
 				};
-			o.a.render(Object(l.jsx)(a.a.StrictMode, { children: Object(l.jsx)(g, {}) }), document.getElementById('root')), x();
+			o.a.render(Object(l.jsx)(r.a.StrictMode, { children: Object(l.jsx)(h, {}) }), document.getElementById('root')), x();
 		},
 	},
 	[[75, 1, 2]],
 ]);
+<<<<<<< HEAD:tools/geniobot/build/static/js/main.ede4f994.chunk.js
 //# sourceMappingURL=main.ede4f994.chunk.js.map
+=======
+//# sourceMappingURL=main.985fb013.chunk.js.map
+>>>>>>> ad5cac1 (change names):tools/geniobot/build/static/js/main.985fb013.chunk.js

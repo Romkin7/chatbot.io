@@ -1,4 +1,4 @@
-(this['webpackJsonpchatbot-frontend'] = this['webpackJsonpchatbot-frontend'] || []).push([
+(this.webpackJsonpgeniobot = this.webpackJsonpgeniobot || []).push([
 	[3],
 	{
 		76: function (t, n, e) {
@@ -88,23 +88,23 @@
 						}));
 				},
 				l = -1,
-				h = function () {
+				g = function () {
 					return 'hidden' === document.visibilityState ? 0 : 1 / 0;
 				},
-				S = function () {
+				h = function () {
 					f(function (t) {
 						var n = t.timeStamp;
 						l = n;
 					}, !0);
 				},
-				g = function () {
+				S = function () {
 					return (
 						l < 0 &&
-							((l = h()),
-							S(),
+							((l = g()),
+							h(),
 							d(function () {
 								setTimeout(function () {
-									(l = h()), S();
+									(l = g()), h();
 								}, 0);
 							})),
 						{
@@ -116,7 +116,7 @@
 				},
 				y = function (t, n) {
 					var e,
-						i = g(),
+						i = S(),
 						a = u('FCP'),
 						r = c('paint', function (t) {
 							'first-contentful-paint' === t.name &&
@@ -182,7 +182,7 @@
 				},
 				k = function (t, n) {
 					var e,
-						r = g(),
+						r = S(),
 						s = u('FID'),
 						v = function (t) {
 							t.startTime < r.timeStamp && ((s.value = t.processingStart - t.startTime), s.entries.push(t), m.add(s), e());
@@ -209,7 +209,7 @@
 				},
 				C = function (t, n) {
 					var e,
-						i = g(),
+						i = S(),
 						a = u('LCP'),
 						r = function (t) {
 							var n = t.startTime;
@@ -258,4 +258,4 @@
 		},
 	},
 ]);
-//# sourceMappingURL=3.2545bcc8.chunk.js.map
+//# sourceMappingURL=3.9d185dd2.chunk.js.map

@@ -15,6 +15,9 @@ export interface IConnectionSettings {
 export interface IMessage {
 	text: string;
 	id: number;
+	uname: string;
+	createdAt: Date;
+	updatedAt: Date;
 }
 export interface IIncomingMessage {
 	text: string;
@@ -26,6 +29,7 @@ interface ILogo {
 }
 type Statuses = 'Paid' | 'Open invoice';
 type PlanType = 'free' | 'pro';
+type Languages = 'Finnish' | 'English' | 'Swedish' | 'Russian' | 'Ukrainean';
 export interface IInvoice {
 	invoiceNumber: string;
 	dueDate: Date;
@@ -41,9 +45,7 @@ interface ILastInvoice {
 	invoiceNumber: string;
 }
 export interface IInvoiceAdminView extends IFullInvoice {
-	uname: string;
-	uemail: string;
-	uwebsite: string;
+	udata: IUData;
 	purchaseDate: Date;
 	lastInvoice: ILastInvoice;
 }
@@ -54,5 +56,42 @@ export interface ICompanySettings {
 	displayName: string;
 	logo: ILogo;
 	plan: PlanType;
+	defaultLanguage: Languages;
+	notifications: INotification[];
+}
+interface IUData {
+	uname: string;
+	uemail: string;
+	uwebsite: string;
+	phonenumber: string;
+}
+interface INotificationResource {
+	value: string;
+	active: boolean;
+	label: string;
+}
+
+interface INotification {
+	sms: INotificationResource;
+	email: INotificationResource;
+	push: INotificationResource;
+	whenMentioned: INotificationResource;
+}
+interface IQuestion {
+	question: string;
+	answer: string;
+	id: number;
+}
+interface ICategory {
+	name: string;
+	id: number;
+	questions: IQuestion[];
+}
+export interface ICompanyAccount {
+	settings: ICompanySettings;
 	invoices: IInvoice[];
+	messages: IMessage[];
+	password: string;
+	automation: ICategory[];
+	udata: IUData;
 }

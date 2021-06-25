@@ -20,7 +20,8 @@ body {
 
 header,
 main {
-	padding-left: 30vw;
+	padding-left: 32vw;
+	padding-top: 2vh;
 }
 
 main {
@@ -28,6 +29,7 @@ main {
 }
 
 aside {
+	$self: &;
 	width: 30vw;
 	height: 100vh;
 	position: fixed;
@@ -35,4 +37,5 @@ aside {
 	top: 0;
 	left: 0;
 	background: $patrickblue-linear;
+	padding: 2vh 2vw;
 }

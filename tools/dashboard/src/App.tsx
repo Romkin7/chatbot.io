@@ -5,8 +5,6 @@ import Sidebar from './Components/Main/Sidebar';
 import Main from './Components/Main/Main';
 import Footer from './Components/Footer/Footer';
 
-import './App.scss';
-
 function App() {
 	return (
 		<Router>

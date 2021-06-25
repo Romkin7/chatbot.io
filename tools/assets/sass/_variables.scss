@@ -51,7 +51,7 @@ $aquagreen: rgba(35, 219, 189, 1); //highlighter in block names, user icons, inp
 /*Gradients*/
 $cadet-linear: linear-gradient(180deg, $cadet 0%, $cadet1 57.44%, $cadet2 100%),
 	radial-gradient(50% 50% at 50% 50%, $cadet3 0%, $cadet4 100%); //background color
-$patrickblue-linear: linear-gradient(180deg, $patrickblue $patrickblue1 58.85%, $patrickblue2 100%); //sidebar color
+$patrickblue-linear: linear-gradient(180deg, $patrickblue 0%, $patrickblue1 58.85%, $patrickblue2 100%); //sidebar color
 $white-linear: linear-gradient(180deg, $white 0%, $white 100%); //input-color
 
 $pink-linear: linear-gradient(

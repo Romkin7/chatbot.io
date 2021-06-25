@@ -30,6 +30,7 @@ interface ILogo {
 type Statuses = 'Paid' | 'Open invoice';
 type PlanType = 'free' | 'pro';
 type Languages = 'Finnish' | 'English' | 'Swedish' | 'Russian' | 'Ukrainean';
+type Roles = 'basic' | 'admin';
 export interface IInvoice {
 	invoiceNumber: string;
 	dueDate: Date;
@@ -94,4 +95,5 @@ export interface ICompanyAccount {
 	password: string;
 	automation: ICategory[];
 	udata: IUData;
+	role: Roles;
 }

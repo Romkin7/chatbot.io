@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
 
-const Main = () => {
+const Main: FC = () => {
 	return <main>Main</main>;
 };
 

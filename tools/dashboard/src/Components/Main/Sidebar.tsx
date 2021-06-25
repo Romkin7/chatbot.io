@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const Sidebar = () => {
+const Sidebar: FC = () => {
 	return <aside>Sidebar content</aside>;
 };
 

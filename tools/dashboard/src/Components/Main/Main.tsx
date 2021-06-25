@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Switch, Route, NavLink } from 'react-router-dom';
+/* import { Switch, Route, NavLink } from 'react-router-dom'; */
 
 const Main: FC = () => {
 	return <main>Main</main>;

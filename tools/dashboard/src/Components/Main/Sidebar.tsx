@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar: FC = () => {
 	return (
@@ -8,15 +9,33 @@ const Sidebar: FC = () => {
 			</section>
 			<nav>
 				<ul>
-					<li>Overview</li>
-					<li>Invoices</li>
-					<li>Messages</li>
-					<li>Automation</li>
-					<li>Art. Intellect</li>
-					<li>API-list</li>
-					<li>Settings</li>
-					<li>Help</li>
-					<li>Administrator</li>
+					<NavLink exact to="/">
+						<li>Overview</li>
+					</NavLink>
+					<NavLink to="/invoices">
+						<li>Invoices</li>
+					</NavLink>
+					<NavLink to="/messages">
+						<li>Messages</li>
+					</NavLink>
+					<NavLink to="/automation">
+						<li>Automation</li>
+					</NavLink>
+					<NavLink to="/intellect">
+						<li>Art. Intellect</li>
+					</NavLink>
+					<NavLink to="/api-list">
+						<li>API-list</li>
+					</NavLink>
+					<NavLink to="/settings">
+						<li>Settings</li>
+					</NavLink>
+					<NavLink to="/help">
+						<li>Help</li>
+					</NavLink>
+					<NavLink to="/administrator">
+						<li>Administrator</li>
+					</NavLink>
 				</ul>
 			</nav>
 			<button>Upgrade to pro</button>

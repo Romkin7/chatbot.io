@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-	return <div>Copywrite 2021</div>;
+	return <footer>Copywrite 2021</footer>;
 };
 
 export default Footer;

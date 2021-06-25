@@ -1,10 +1,45 @@
 nav {
-	padding: 10vh 5vw;
+	aside & {
+		padding-top: 10vh;
 
-	ul {
-		list-style: none;
-		li {
-			margin: 4vh 0;
+		ul {
+			list-style: none;
+			li {
+				margin: 4vh 0;
+			}
+			a {
+				text-decoration: none;
+				color: $snowwhite;
+			}
 		}
 	}
+}
+
+button {
+	aside & {
+		margin-top: 1vh;
+		background-color: $darkblack;
+		color: $golden;
+		padding: 1.5rem 1rem;
+		border: none;
+		text-transform: uppercase;
+		font-family: $ibmplexmono;
+		font-size: 1.4rem;
+		border-radius: $border-radius;
+		-webkit-border-radius: $border-radius;
+		-moz-border-radius: $border-radius;
+		-ms-border-radius: $border-radius;
+		-o-border-radius: $border-radius;
+	}
+}
+
+.active {
+	display: block;
+	padding: 0.1rem;
+	background-color: $lightgrey;
+	border-radius: $border-radius;
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	-ms-border-radius: $border-radius;
+	-o-border-radius: $border-radius;
 }

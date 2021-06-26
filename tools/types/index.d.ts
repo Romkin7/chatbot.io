@@ -15,9 +15,9 @@ export interface IConnectionSettings {
 export interface IMessage {
 	text: string;
 	id: number;
-	uname: string;
-	createdAt: Date;
-	updatedAt: Date;
+	// uname: string;
+	// createdAt: Date;
+	// updatedAt: Date;
 }
 export interface IIncomingMessage {
 	text: string;

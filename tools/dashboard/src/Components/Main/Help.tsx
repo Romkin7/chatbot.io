@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const Help = () => {
+const Help: FC = () => {
 	return <div>This is for Help content</div>;
 };
 

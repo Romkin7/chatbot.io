@@ -160,8 +160,4 @@
 	},
 	[[75, 1, 2]],
 ]);
-<<<<<<< HEAD:tools/geniobot/build/static/js/main.ede4f994.chunk.js
-//# sourceMappingURL=main.ede4f994.chunk.js.map
-=======
-//# sourceMappingURL=main.985fb013.chunk.js.map
->>>>>>> ad5cac1 (change names):tools/geniobot/build/static/js/main.985fb013.chunk.js
+//# sourceMappingURL=main.b72dfb2c.chunk.js.map

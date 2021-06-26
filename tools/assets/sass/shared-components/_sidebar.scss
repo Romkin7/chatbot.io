@@ -1,0 +1,46 @@
+nav {
+	aside & {
+		/* padding-top: 1vh; */
+
+		ul {
+			list-style: none;
+			li {
+				margin: 4vh 0;
+			}
+			a {
+				text-decoration: none;
+				color: $snowwhite;
+			}
+		}
+	}
+}
+
+button {
+	aside & {
+		margin-top: 1vh;
+		background-color: $darkblack;
+		color: $golden;
+		padding: 1.5rem 1rem;
+		border: none;
+		text-transform: uppercase;
+		font-family: $ibmplexmono;
+		font-size: 1.4rem;
+		border-radius: $borderRadius;
+		-webkit-border-radius: $borderRadius;
+		-moz-border-radius: $borderRadius;
+		-ms-border-radius: $borderRadius;
+		-o-border-radius: $borderRadius;
+	}
+}
+
+.active {
+	aside & {
+		display: block;
+		background-color: $lightgrey;
+		border-radius: $borderRadius;
+		-webkit-border-radius: $borderRadius;
+		-moz-border-radius: $borderRadius;
+		-ms-border-radius: $borderRadius;
+		-o-border-radius: $borderRadius;
+	}
+}

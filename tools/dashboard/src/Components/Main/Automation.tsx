@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const Automation = () => {
+const Automation: FC = () => {
 	return <div>This is for automation</div>;
 };
 

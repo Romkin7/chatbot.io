@@ -14,13 +14,12 @@ export interface IConnectionSettings {
 }
 export interface IMessage {
 	text: string;
-	id: number;
-	// uname: string;
-	// createdAt: Date;
-	// updatedAt: Date;
+	uname: string;
 }
-export interface IIncomingMessage {
-	text: string;
+export interface ISavedMessage extends IMessage {
+	id: number;
+	createdAt: Date;
+	updatedAt: Date;
 }
 /** Company Settings types */
 interface ILogo {

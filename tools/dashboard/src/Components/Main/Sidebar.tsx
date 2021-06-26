@@ -5,7 +5,7 @@ const Sidebar: FC = () => {
 	return (
 		<aside>
 			<section className="logo">
-				<img src="assets/images/Logo.svg" alt="geniobot logo" />
+				<img src="https://res.cloudinary.com/geniobot-io/image/upload/v1624693972/Logo_plmy4d.svg" alt="geniobot logo" />
 			</section>
 			<nav>
 				<ul>

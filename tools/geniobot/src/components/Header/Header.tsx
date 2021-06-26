@@ -9,7 +9,7 @@ interface IHeader {
 const Header: FC<IHeader> = ({ headerText, logoSrc, logoAlt }) => {
 	return (
 		<header className="geniobot--header">
-			<img src={logoSrc} alt={logoAlt} />
+			<img className="geniobot--header__logo" src={logoSrc} alt={logoAlt} />
 			<h3 className="geniobot--header__title">{headerText}</h3>
 		</header>
 	);

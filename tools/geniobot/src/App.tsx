@@ -5,14 +5,14 @@ import './App.scss';
 
 const App: FC = () => {
 	return (
-		<>
+		<div className="geniobot">
 			<Header
 				headerText="geniobot.io"
 				logoSrc="https://res.cloudinary.com/geniobot-io/image/upload/v1624693972/Logo_plmy4d.svg"
 				logoAlt="geniobot.io logo"
 			/>
 			<Chat />
-		</>
+		</div>
 	);
 };
 

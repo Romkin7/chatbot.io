@@ -1,1 +1,20 @@
 @import './variables';
+
+.geniobot {
+	display: flex;
+	flex-direction: column;
+	width: 32.25rem;
+	max-width: 612px;
+	&--header {
+		border: 1px solid $darkgray;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 6.438rem;
+		background-color: $whiteLinear90;
+		&__logo {
+			width: 2rem;
+		}
+	}
+}

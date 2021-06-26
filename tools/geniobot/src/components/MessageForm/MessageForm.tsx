@@ -7,7 +7,7 @@ interface IMessageFormProps {
 }
 
 const MessageForm: FC<IMessageFormProps> = ({ setMessage }) => {
-	const [messageFormState, setMessageFormState] = useState('');
+	const [messageFormState, setMessageFormState] = useState({ text: '', uname: 'RomanT' });
 	const handleSubmit = (event: FormEvent) => {
 		event.preventDefault();
 		setMessage(messageFormState);

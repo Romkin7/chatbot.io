@@ -6,14 +6,15 @@ interface IMessageProps {
 }
 
 const Message: FC<IMessageProps> = ({ message }) => {
+	console.log(message);
 	return (
 		<>
-			{message.text && (
+			{message && (
 				<p>
 					<time dateTime={new Date().toLocaleDateString('fi') + ' ' + new Date().toLocaleTimeString('fi')}>
 						{new Date().toLocaleDateString('fi') + ' ' + new Date().toLocaleTimeString('fi')}{' '}
 					</time>{' '}
-					{message.text}
+					{message.uname + ' ' + message.text}
 				</p>
 			)}
 		</>

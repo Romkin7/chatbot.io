@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const API = () => {
+const API: FC = () => {
 	return <div>This is for API lict content</div>;
 };
 

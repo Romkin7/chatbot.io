@@ -1,5 +1,6 @@
 import React, { useState, useEffect, FC } from 'react';
 import Message from '../Message/Message';
+import CategoriesList from '../Categories/CategoriesList';
 import MessageForm from '../MessageForm/MessageForm';
 import socketIOClient, { Socket } from 'socket.io-client';
 import { IMessage } from 'app-shared-types';
@@ -31,6 +32,7 @@ const Chat: FC = () => {
 	};
 	return (
 		<>
+			<CategoriesList categories={[]} />
 			{messages.length &&
 				messages.map((message: IMessage) => {
 					return <Message key={Date.now()} message={message} />;

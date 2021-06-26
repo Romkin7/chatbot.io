@@ -49,12 +49,12 @@ $golden: rgba(255, 184, 1, 1); //highlighter in icons, main buttons,logo, subscr
 $aquagreen: rgba(35, 219, 189, 1); //highlighter in block names, user icons, input borders and edit icons
 
 /*Gradients*/
-$cadet-linear: linear-gradient(180deg, $cadet 0%, $cadet1 57.44%, $cadet2 100%),
+$cadetLinear: linear-gradient(180deg, $cadet 0%, $cadet1 57.44%, $cadet2 100%),
 	radial-gradient(50% 50% at 50% 50%, $cadet3 0%, $cadet4 100%); //background color
-$patrickblue-linear: linear-gradient(180deg, $patrickblue 0%, $patrickblue1 58.85%, $patrickblue2 100%); //sidebar color
-$white-linear: linear-gradient(180deg, $white 0%, $white 100%); //input-color
+$patrickblueLinear: linear-gradient(180deg, $patrickblue 0%, $patrickblue1 58.85%, $patrickblue2 100%); //sidebar color
+$whiteLinear: linear-gradient(180deg, $white 0%, $white 100%); //input-color
 
-$pink-linear: linear-gradient(
+$pinkLinear: linear-gradient(
 	231.9deg,
 	$transparentpeach 1.04%,
 	$peachpink 11.89%,
@@ -65,7 +65,7 @@ $pink-linear: linear-gradient(
 	$transparentrose 115.35%
 ); //highlight block names,
 
-$green-linear: linear-gradient(
+$greenLinear: linear-gradient(
 	47.83deg,
 	$transparentblue 0%,
 	$darkbluetransp 3.59%,
@@ -78,7 +78,7 @@ $green-linear: linear-gradient(
 	$transparentgreen2 95.53%
 ); //highlight block names, user icons
 
-$orange-linear: linear-gradient(
+$orangeLinear: linear-gradient(
 	44.5deg,
 	$transparentorange -0.75%,
 	$transparentorange2 3.79%,
@@ -95,4 +95,4 @@ $darkblack: rgba(20, 18, 38, 1); //main buttons
 $lightgrey: rgba(196, 196, 196, 0.1);
 
 /*Borders*/
-$border-radius: 20px;
+$borderRadius: 20px;

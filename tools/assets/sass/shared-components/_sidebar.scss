@@ -1,6 +1,6 @@
 nav {
 	aside & {
-		padding-top: 10vh;
+		/* padding-top: 1vh; */
 
 		ul {
 			list-style: none;
@@ -25,23 +25,22 @@ button {
 		text-transform: uppercase;
 		font-family: $ibmplexmono;
 		font-size: 1.4rem;
-		border-radius: $border-radius;
-		-webkit-border-radius: $border-radius;
-		-moz-border-radius: $border-radius;
-		-ms-border-radius: $border-radius;
-		-o-border-radius: $border-radius;
+		border-radius: $borderRadius;
+		-webkit-border-radius: $borderRadius;
+		-moz-border-radius: $borderRadius;
+		-ms-border-radius: $borderRadius;
+		-o-border-radius: $borderRadius;
 	}
 }
 
 .active {
 	aside & {
 		display: block;
-		padding: 0.1rem;
 		background-color: $lightgrey;
-		border-radius: $border-radius;
-		-webkit-border-radius: $border-radius;
-		-moz-border-radius: $border-radius;
-		-ms-border-radius: $border-radius;
-		-o-border-radius: $border-radius;
+		border-radius: $borderRadius;
+		-webkit-border-radius: $borderRadius;
+		-moz-border-radius: $borderRadius;
+		-ms-border-radius: $borderRadius;
+		-o-border-radius: $borderRadius;
 	}
 }

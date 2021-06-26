@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background-image: $cadet-linear;
+	background-image: $cadetLinear;
 	background-repeat: no-repeat;
 	height: 100vh;
 	background-attachment: fixed;
@@ -35,7 +35,7 @@ aside {
 	z-index: 999;
 	top: 0;
 	left: 0;
-	background: $patrickblue-linear;
+	background: $patrickblueLinear;
 	padding: 2vh 2vw;
 	display: flex;
 	flex-direction: column;
@@ -43,7 +43,9 @@ aside {
 }
 
 footer {
+	padding-left: 32vw;
 	text-align: center;
+	font-size: 1rem;
 }
 
 button {

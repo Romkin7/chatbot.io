@@ -3,18 +3,19 @@
 .geniobot {
 	display: flex;
 	flex-direction: column;
-	width: 32.25rem;
+	width: 30.25rem;
 	max-width: 612px;
 	&--header {
 		border: 1px solid $darkgray;
+		padding: 1.5rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		height: 6.438rem;
-		background-color: $whiteLinear90;
+		height: 5.438rem;
+		background: $whiteLinear90;
 		&__logo {
-			width: 2rem;
+			width: 6rem;
 		}
 	}
 }

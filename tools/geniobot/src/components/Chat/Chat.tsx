@@ -32,12 +32,16 @@ const Chat: FC = () => {
 	};
 	return (
 		<>
-			<CategoriesList categories={[]} />
-			{messages.length &&
-				messages.map((message: IMessage) => {
-					return <Message key={Date.now()} message={message} />;
-				})}
-			<MessageForm setMessage={addMessage} />
+			<main>
+				<CategoriesList categories={[]} />
+				{messages.length &&
+					messages.map((message: IMessage) => {
+						return <Message key={Date.now()} message={message} />;
+					})}
+			</main>
+			<footer>
+				<MessageForm setMessage={addMessage} />
+			</footer>
 		</>
 	);
 };

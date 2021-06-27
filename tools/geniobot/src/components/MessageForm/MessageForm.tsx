@@ -7,13 +7,13 @@ interface IMessageFormProps {
 }
 
 const MessageForm: FC<IMessageFormProps> = ({ setMessage }) => {
-	const [messageFormState, setMessageFormState] = useState('');
+	const [messageFormState, setMessageFormState] = useState({ text: '', uname: 'RomanT' });
 	const handleSubmit = (event: FormEvent) => {
 		event.preventDefault();
 		setMessage(messageFormState);
 	};
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className="geniobot--chat__form">
 			<Input label="new message" name="message" type="text" changeHandler={setMessageFormState} required />
 			<Button color="primary" type="submit" size="md">
 				Add

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, FC } from 'react';
 import Message from '../Message/Message';
+import CategoriesList from '../Categories/CategoriesList';
 import MessageForm from '../MessageForm/MessageForm';
 import socketIOClient, { Socket } from 'socket.io-client';
 import { IMessage } from 'app-shared-types';
@@ -7,7 +8,7 @@ const ENDPOINT = 'http://127.0.0.1:8080';
 let socket: Socket;
 
 const Chat: FC = () => {
-	const [messages, setMessages] = useState<IMessage[]>([{ id: 0, text: '' }]);
+	const [messages, setMessages] = useState<IMessage[]>([{ text: '', uname: '' }]);
 
 	useEffect(() => {
 		socket = socketIOClient(ENDPOINT, {
@@ -16,25 +17,37 @@ const Chat: FC = () => {
 				'my-company': 'halkoliiteri.com',
 			},
 		});
-		socket?.on('add-message', (message: string) => {
-			setMessages((messages) => [...messages, { id: Date.now(), text: message }]);
+		socket?.on('add-message', (message: IMessage) => {
+			setMessages((messages) => [...(messages as IMessage[]), message]);
 		});
-		socket?.on('broadcast', (message: string) => {
-			setMessages((messages) => [...messages, { id: Date.now(), text: message }]);
+		socket?.on('broadcast', (message: IMessage) => {
+			setMessages((messages) => [...(messages as IMessage[]), message]);
 		});
 		// CLEAN UP THE EFFECT
 		return () => socket?.disconnect() as any;
 	}, []);
 
 	const addMessage = (text: string) => {
-		socket?.emit('new-message', { text });
+		socket?.emit('new-message', { text: text, uname: 'RomanT' });
 	};
+	const categories = [
+		{ name: 'Mobile Subscriptions', id: 1, questions: [{ question: 'How much it costs?', answer: 'It depends on plan.', id: 1 }] },
+		{ name: 'Wifi Subscriptions', id: 2, questions: [{ question: 'How much it costs?', answer: 'It depends on plan.', id: 1 }] },
+	];
 	return (
 		<>
-			{messages.map((message: IMessage) => {
-				return <Message key={message.id} message={message} />;
-			})}
-			<MessageForm setMessage={addMessage} />
+			<main className="geniobot--chat">
+				<CategoriesList categories={categories} />
+				<ul className="geniobot--chat__messages">
+					{messages.length &&
+						messages.map((message: IMessage) => {
+							return <Message key={Date.now()} message={message} />;
+						})}
+				</ul>
+			</main>
+			<footer>
+				<MessageForm setMessage={addMessage} />
+			</footer>
 		</>
 	);
 };

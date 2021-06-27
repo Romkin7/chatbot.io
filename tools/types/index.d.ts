@@ -5,6 +5,7 @@ export type TextColors = 'black' | 'white';
 export type ButtonTypes = 'submit' | 'button' | 'reset';
 export type InputTypes = 'text' | 'password' | 'email' | 'tel' | 'checkbox' | 'radio';
 export type TargetTypes = '_blank' | '_self' | '_parent' | '_top';
+export type IconNames = 'close';
 export interface IConnectionSettings {
 	user: string;
 	password: string;
@@ -82,7 +83,7 @@ interface IQuestion {
 	answer: string;
 	id: number;
 }
-interface ICategory {
+export interface ICategory {
 	name: string;
 	id: number;
 	questions: IQuestion[];

@@ -19,6 +19,11 @@ export interface IMessage {
 export interface IIncomingMessage {
 	text: string;
 }
+
+export interface ILogo {
+	src: string;
+	alt: string;
+}
 /** Company Settings types */
 interface ILogo {
 	src: string;

@@ -4,6 +4,8 @@ $inter: 'Inter', sans-serif;
 $ibmplexmono: 'IBM Plex Mono', monospace;
 
 /*Colors*/
+$goldenYellow: #ffcf54;
+$darkgray: #333333;
 /*Secondary helpful colors*/
 $white: rgba(255, 255, 255, 1);
 $peachpink: rgba(255, 137, 121, 1);
@@ -53,6 +55,7 @@ $cadetLinear: linear-gradient(180deg, $cadet 0%, $cadet1 57.44%, $cadet2 100%),
 	radial-gradient(50% 50% at 50% 50%, $cadet3 0%, $cadet4 100%); //background color
 $patrickblueLinear: linear-gradient(180deg, $patrickblue 0%, $patrickblue1 58.85%, $patrickblue2 100%); //sidebar color
 $whiteLinear: linear-gradient(180deg, $white 0%, $white 100%); //input-color
+$whiteLinear90: linear-gradient(to bottom, rgba($white, 0.9) 0%, rgba($white, 0.81) 100%); //input-color
 
 $pinkLinear: linear-gradient(
 	231.9deg,

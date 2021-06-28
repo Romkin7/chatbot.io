@@ -1,7 +1,11 @@
-FROM node:alpine
+FROM node:alpine as build-phase
 WORKDIR /geniobot
-COPY ./package.json ./
-RUN npm install -g npm
-RUN yarn
-COPY ./ ./
-CMD ["yarn", "start"]
+COPY ./build ./
+
+# Installs Nginx from image
+FROM nginx
+
+# Exposes Nginx port 80 from inside of the container
+EXPOSE 80
+
+COPY --from=build-phase /geniobot /usr/share/nginx/html

@@ -4,11 +4,12 @@
 	"description": "Socket.io NodeJS GenioBot backend",
 	"main": "build/server.js",
 	"scripts": {
-		"start": "yarn build && tsc -w & nodemon build/server/server.js",
+		"start": "yarn build && tsc -w & docker-compose up",
 		"start:windows": "yarn build && tsc -w | nodemon build/server/server.js",
 		"build": "rimraf build && tsc",
 		"test": "jest --coverage --colors",
-		"test:watch": "jest --coverage --colors --watchAll"
+		"test:watch": "jest --coverage --colors --watchAll",
+		"serve": "node build/server/server.js"
 	},
 	"licence": "MIT",
 	"repository": {

@@ -1,7 +1,6 @@
 FROM node:alpine
-WORKDIR /server
-COPY ./ /
+WORKDIR /backend
+COPY ./build /
 RUN npm install -g npm
-RUN npm install
 COPY ./ ./
-CMD ["npm", "run", "start"]
+CMD ["node", "backend/build/server/server.js"]

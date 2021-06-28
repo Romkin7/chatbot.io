@@ -21,20 +21,26 @@ body {
 header,
 main {
 	padding-left: 32vw;
-	padding-top: 2vh;
 }
 
 main {
 	min-height: 100vh;
+	padding-top: 19vh;
+}
+
+header {
+	padding-top: 2vh;
+	padding-right: 2vw;
+	display: flex;
+	justify-content: space-between;
 }
 
 aside {
 	width: 30vw;
 	height: 100vh;
-	position: fixed;
+	position: absolute;
 	z-index: 999;
 	top: 0;
-	left: 0;
 	background: $patrickblueLinear;
 	padding: 2vh 2vw;
 	display: flex;

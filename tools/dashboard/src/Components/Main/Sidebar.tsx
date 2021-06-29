@@ -1,14 +1,17 @@
 import React, { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-import TimelineIcon from '@material-ui/icons/Timeline';
-import EuroSymbolIcon from '@material-ui/icons/EuroSymbol';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import DialpadIcon from '@material-ui/icons/Dialpad';
-import CastForEducationIcon from '@material-ui/icons/CastForEducation';
-import SettingsInputCompositeIcon from '@material-ui/icons/SettingsInputComposite';
-import SettingsIcon from '@material-ui/icons/Settings';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-import AccessibilityIcon from '@material-ui/icons/Accessibility';
+
+import {
+	Timeline,
+	EuroSymbol,
+	MailOutline,
+	Dialpad,
+	CastForEducation,
+	SettingsInputComposite,
+	Settings,
+	HelpOutline,
+	Accessibility,
+} from '@material-ui/icons';
 
 const Sidebar: FC = () => {
 	return (
@@ -20,63 +23,63 @@ const Sidebar: FC = () => {
 				<ul>
 					<li>
 						<NavLink exact to="/">
-							<TimelineIcon className="icon" />
+							<Timeline className="icon" />
 							Overview
 						</NavLink>
 					</li>
 
 					<li>
 						<NavLink to="/invoices">
-							<EuroSymbolIcon className="icon" />
+							<EuroSymbol className="icon" />
 							Invoices
 						</NavLink>
 					</li>
 
 					<li>
 						<NavLink to="/messages">
-							<MailOutlineIcon className="icon" />
+							<MailOutline className="icon" />
 							Messages
 						</NavLink>
 					</li>
 
 					<li>
 						<NavLink to="/automation">
-							<DialpadIcon className="icon" />
+							<Dialpad className="icon" />
 							Automation
 						</NavLink>
 					</li>
 
 					<li>
 						<NavLink to="/intellect">
-							<CastForEducationIcon className="icon" />
+							<CastForEducation className="icon" />
 							Art. Intellect
 						</NavLink>
 					</li>
 
 					<li>
 						<NavLink to="/api-list">
-							<SettingsInputCompositeIcon className="icon" />
+							<SettingsInputComposite className="icon" />
 							API-list
 						</NavLink>
 					</li>
 
 					<li>
 						<NavLink to="/settings">
-							<SettingsIcon className="icon" />
+							<Settings className="icon" />
 							Settings
 						</NavLink>
 					</li>
 
 					<li>
 						<NavLink to="/help">
-							<HelpOutlineIcon className="icon" />
+							<HelpOutline className="icon" />
 							Help
 						</NavLink>
 					</li>
 
 					<li>
 						<NavLink to="/administrator">
-							<AccessibilityIcon className="icon" />
+							<Accessibility className="icon" />
 							Administrator
 						</NavLink>
 					</li>

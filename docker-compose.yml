@@ -13,7 +13,7 @@ services:
         env_file: ./tools/backend/.env
         build:
             dockerfile: Dockerfile
-            context: ./tools/backend
+            context: ./tools
         volumes:
             - /tools/backend/node_modules
             - /tools/types

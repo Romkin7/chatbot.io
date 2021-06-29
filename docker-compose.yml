@@ -1,0 +1,33 @@
+version: '3'
+services:
+    geniobot:
+        build:
+            dockerfile: Dockerfile
+            context: ./tools/geniobot
+        volumes:
+            - /tools/geniobot/node_modules
+            - /tools/types
+            - /tools/assets
+            - ./tools/geniobot/:/geniobot
+    backend:
+        env_file: ./tools/backend/.env
+        build:
+            dockerfile: Dockerfile
+            context: ./tools
+        volumes:
+            - /tools/backend/node_modules
+            - /tools/types
+            - ./tools/backend/:/backend
+    postgres:
+        image: 'postgres:latest'
+        env_file: ./tools/backend/.env
+    redis:
+        image: 'redis:latest'
+        env_file: ./tools/backend/.env
+    nginx:
+        restart: always
+        build:
+            dockerfile: Dockerfile.dev
+            context: ./tools/backend/nginx
+        ports:
+            - '8080:80'

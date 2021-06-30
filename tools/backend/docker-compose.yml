@@ -1,0 +1,22 @@
+version: '3'
+services:
+    backend:
+        env_file: ./.env
+        build:
+            dockerfile: Dockerfile
+            context: ./
+        volumes:
+            - ./build:/build
+    postgres:
+        image: 'postgres:latest'
+        env_file: ./.env
+    redis:
+        image: 'redis:latest'
+        env_file: ./.env
+    nginx:
+        restart: always
+        build:
+            dockerfile: Dockerfile.dev
+            context: ./nginx
+        ports:
+            - '8080:80'

@@ -1,5 +1,6 @@
 FROM node:alpine
-WORKDIR /backend
-COPY ./package.json /
+
+COPY . /build
+WORKDIR /build
 
 CMD ["node", "build/server/server.js"]

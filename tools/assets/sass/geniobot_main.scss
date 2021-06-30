@@ -31,22 +31,26 @@
 		flex-wrap: nowrap;
 		padding: 13px 0 13px 6px;
 		background-color: $white;
+		height: 468px;
 		&__categories {
+			/** ul */
 			flex-basis: 12.438rem;
 			padding-left: 0;
+			border-right: 1px solid $darkgray;
 			&-category {
+				/** li */
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
 				height: 98px;
 				border-bottom: 1px solid $darkgray;
-				border-right: 1px solid $darkgray;
 				color: $darkgray;
 				font-family: $inter;
 				font-weight: 300;
 				font-size: 1.875rem;
 				line-height: 2.25rem;
+				padding: 0.6rem;
 				cursor: pointer;
 				&-active {
 					background-color: $goldenYellow;

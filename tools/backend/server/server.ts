@@ -21,7 +21,7 @@ startChat(io, app);
 app.set('trust proxy', true);
 app.set('port', process.env.PORT || 8080);
 app.set('ip', process.env.IP || '127.0.0.1');
-// app.use(cors());
+app.use(cors());
 
 app.get('/', (req, res) => {
 	return res.send('Hello world');
